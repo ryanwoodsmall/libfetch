@@ -14,6 +14,6 @@ patch/build script, segfaulting but builds now: https://gist.github.com/ryanwood
 
 - fetch from freebsd:
   - https://github.com/freebsd/freebsd/tree/master/lib/libfetch
-- old alpine package: 
+- old alpine package:
   - APKBUILD: https://git.alpinelinux.org/aports/tree/main/libfetch/APKBUILD?h=3.3-stable
   - Makefile: https://git.alpinelinux.org/aports/tree/main/libfetch/Makefile?h=3.3-stable
