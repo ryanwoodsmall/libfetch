@@ -12,7 +12,7 @@ CFLAGS   += -O2 -pipe -I. -fPIC $(WARNINGS)
 
 CFLAGS	+= -DFTP_COMBINE_CWDS -DNETBSD
 
-CFLAGS+= $(shell pkg-config --cflags libbsd-overlay libssl libcrypto zlib)
+CFLAGS+=$(shell pkg-config --cflags libbsd-overlay libssl libcrypto zlib)
 LDFLAGS=$(shell pkg-config --libs libbsd-overlay libssl libcrypto zlib)
 
 ifeq ($(strip $(FETCH_WITH_LFS)), true)
@@ -25,7 +25,7 @@ endif
 
 ifeq ($(strip $(FETCH_WITH_OPENSSL)), true)
 CFLAGS+=	-DWITH_SSL
-LDFLAGS+=	-lssl -lcrypto -lz
+LDFLAGS+=	-lbsd -lssl -lcrypto -lz
 endif
 
 ifeq ($(strip $(DEBUG)), true)
